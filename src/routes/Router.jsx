@@ -4,6 +4,7 @@ import {
 import Root from "../layouts/Root";
 import Home from "../pages/Home";
 
+
 const Router = createBrowserRouter([
     {
         path: '/',

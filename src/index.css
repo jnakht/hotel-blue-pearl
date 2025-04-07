@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-background: #18181B;
+  --color-mText: #fefefe;
+}
