@@ -18,7 +18,7 @@ import Slider4 from './Slider4';
 
 const Slider = () => {
     return (
-        <>
+        <div className='h-[50vh] lg:h-full'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -51,7 +51,7 @@ const Slider = () => {
 
                 
             </Swiper>
-        </>
+        </div>
     );
 };
 
