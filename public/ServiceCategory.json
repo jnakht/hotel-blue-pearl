@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "title": "Luxury Rooms",
+      "description": "Experience unmatched comfort and elegance in our beautifully designed luxury rooms.",
+      "image": "https://i.ibb.co/ZYW3VTp/luxury-room.jpg",
+      "cta": "Explore Rooms"
+    },
+    {
+      "id": 2,
+      "title": "Rooftop Restaurant",
+      "description": "Enjoy gourmet meals with stunning city views at our rooftop restaurant.",
+      "image": "https://i.ibb.co/Hxv7zzv/rooftop-restaurant.jpg",
+      "cta": "View Menu"
+    },
+    {
+      "id": 3,
+      "title": "Wellness & Spa",
+      "description": "Rejuvenate your senses with our relaxing spa and wellness treatments.",
+      "image": "https://i.ibb.co/Kb0y3vF/spa.jpg",
+      "cta": "Book a Session"
+    },
+    {
+      "id": 4,
+      "title": "Conference Hall",
+      "description": "Host meetings and events in our fully-equipped and elegant conference space.",
+      "image": "https://i.ibb.co/yP0xCM5/conference.jpg",
+      "cta": "Check Availability"
+    }
+  ]
+  
