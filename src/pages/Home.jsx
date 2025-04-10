@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Slider from "./Slider";
 import { AuthContext } from "../providers/AuthProvider";
+import HomepageCards from "./HomepageCards";
 
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
 
            <div className="bg-background text-mText h-[90vh]">
               <Slider></Slider>
-              {str} {homeCards.length}
+              <HomepageCards></HomepageCards>
            </div>
 
         </div>
