@@ -1,8 +1,13 @@
+import SingleCard from "../components/SingleCard";
+import { getAuth } from "../utility/AuthCon";
 
 const LuxuryRooms = () => {
+    const {luxuryRoomsCards} = getAuth();
     return (
         <div className="text-white">
-            this is luxury rooms page
+            {
+                luxuryRoomsCards.map(card => <SingleCard card={card}></SingleCard>)
+            }
         </div>
     );
 };
