@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Grand Sapphire Hall",
+      "segment_name": "Conference Hall",
+      "short_description": "Host your high-profile business meetings or corporate events in the Grand Sapphire Hall, equipped with luxury seating, LED walls, and high-speed connectivity for a premium experience.",
+      "long_description": "The Grand Sapphire Hall is designed for those who demand excellence. With seating for up to 300 guests, this hall is perfect for conferences, summits, and product launches. It features ultra-high-definition LED screens, ambient lighting, soundproof acoustics, and concierge support. Guests will also enjoy access to a private lounge and gourmet refreshment station during the event.",
+      "price": "$1500/day",
+      "status": "rent",
+      "area": "5000 sq ft",
+      "location": "East Wing, Ground Floor",
+      "facilities": ["Projector", "LED Wall", "High-Speed Wi-Fi", "Private Lounge"],
+      "image": "https://i.ibb.co/LZJDq0p/conference-1.jpg",
+      "cta": "Book Now"
+    },
+    {
+      "id": 2,
+      "estate_title": "Executive Boardroom",
+      "segment_name": "Conference Hall",
+      "short_description": "Designed for high-level board meetings and exclusive brainstorming sessions, the Executive Boardroom offers privacy, technology, and comfort in a premium setup.",
+      "long_description": "The Executive Boardroom provides an ideal space for C-level discussions, team briefings, or private presentations. With ergonomic leather chairs, an interactive smart board, wireless screen sharing, and a 24-hour butler service, this boardroom ensures every detail is taken care of for a seamless experience.",
+      "price": "$600/day",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "3rd Floor, West Wing",
+      "facilities": ["Smart Board", "Wireless Presentation", "Leather Seating"],
+      "image": "https://i.ibb.co/KVdFKqY/conference-2.jpg",
+      "cta": "Check Availability"
+    },
+    {
+      "id": 3,
+      "estate_title": "Innovation Hub",
+      "segment_name": "Conference Hall",
+      "short_description": "A flexible, tech-rich space built for creativity, collaboration, and agile workshops – perfect for training sessions and team innovations.",
+      "long_description": "The Innovation Hub is a modular conference room that adapts to your event's needs. Moveable walls, writable glass boards, advanced lighting, and an open layout make it ideal for hackathons, training events, or creative workshops. Enjoy integrated coffee stations and breakout zones for group discussions.",
+      "price": "$950/day",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "South Pavilion",
+      "facilities": ["Modular Layout", "Writable Walls", "Breakout Zones"],
+      "image": "https://i.ibb.co/9TFMq7h/conference-3.jpg",
+      "cta": "Reserve Space"
+    },
+    {
+      "id": 4,
+      "estate_title": "Crystal Hall",
+      "segment_name": "Conference Hall",
+      "short_description": "Crystal Hall offers a sophisticated ambiance with elegant chandeliers, glass decor, and customizable seating for seminars, banquets, or talks.",
+      "long_description": "Crystal Hall is the epitome of class. Designed to host formal corporate events, academic conferences, or luxury networking dinners, it features Italian marble flooring, panoramic sound systems, mood lighting, and premium security. With catering add-ons and valet parking, your event will stand out in elegance and service.",
+      "price": "$1800/day",
+      "status": "rent",
+      "area": "4800 sq ft",
+      "location": "Central Atrium",
+      "facilities": ["Sound System", "Custom Lighting", "VIP Catering"],
+      "image": "https://i.ibb.co/FnpyXTn/conference-4.jpg",
+      "cta": "View Details"
+    },
+    {
+      "id": 5,
+      "estate_title": "Studio Seminar Room",
+      "segment_name": "Conference Hall",
+      "short_description": "A compact, modern room tailored for intimate workshops, seminars, and coaching sessions with HD screen and whiteboard setup.",
+      "long_description": "The Studio Seminar Room offers an efficient, well-lit space for small-group activities or instructor-led workshops. It includes a 4K UHD TV screen, wireless audio system, interactive whiteboard, and adaptive air conditioning. It's perfect for corporate training, startup mentoring, or short-term skill sessions.",
+      "price": "$450/day",
+      "status": "rent",
+      "area": "800 sq ft",
+      "location": "Business Center, Level 1",
+      "facilities": ["4K Display", "Interactive Board", "Adjustable Seating"],
+      "image": "https://i.ibb.co/n3sLwqn/conference-5.jpg",
+      "cta": "Book Session"
+    },
+    {
+      "id": 6,
+      "estate_title": "Harmony Multi-Purpose Hall",
+      "segment_name": "Conference Hall",
+      "short_description": "This dynamic hall is suitable for everything from press briefings to small exhibitions, with customizable decor, A/V support, and partition walls.",
+      "long_description": "The Harmony Hall is designed to accommodate a wide variety of mid-sized events. It includes high-resolution projection systems, dimmable lighting, sound control, and customizable partition walls. Its neutral, elegant interior makes it ideal for brand launches, award nights, or networking meetups. The venue can be tailored exactly to your theme and requirements.",
+      "price": "$1000/day",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "North Building, Level 2",
+      "facilities": ["Projection System", "Movable Walls", "Acoustic Design"],
+      "image": "https://i.ibb.co/YPyNbyy/conference-6.jpg",
+      "cta": "Schedule Now"
+    }
+  ]
+  
