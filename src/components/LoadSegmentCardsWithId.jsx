@@ -18,7 +18,7 @@ const LoadSegmentCardsWithId = (id) => {
         toLoadCards = conferenceHallCards;
     }
     return (
-        <div>
+        <div className='max-w-5/6 mx-auto border-2 border-red-900'>
             {
                 toLoadCards.map(card => <SingleCard card={card}></SingleCard>)
             }
