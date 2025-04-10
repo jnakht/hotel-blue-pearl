@@ -10,10 +10,10 @@ const SingleHomeCard = ({card}) => {
             src={image}
             alt="Album" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">{title}</h2>
-          <p>{description}</p>
-            <button className="btn btn-primary">Listen</button>
+        <div className="flex flex-col justify-center items-center max-w-[60%] space-y-3 text-center">
+          <h2 className="text-3xl font-normal">{title}</h2>
+          <p className='max-w-[60%]'>{description}</p>
+            <button className="btn w-[200px]">Explore</button>
         </div>
       </div>
     );
