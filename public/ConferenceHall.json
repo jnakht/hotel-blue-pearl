@@ -10,7 +10,7 @@
       "area": "5000 sq ft",
       "location": "East Wing, Ground Floor",
       "facilities": ["Projector", "LED Wall", "High-Speed Wi-Fi", "Private Lounge"],
-      "image": "https://i.ibb.co/LZJDq0p/conference-1.jpg",
+      "image": "https://i.ibb.co.com/mMSL7hb/pexels-michael-d-beckwith-2150568551-31552850.jpg",
       "cta": "Book Now"
     },
     {
@@ -24,7 +24,7 @@
       "area": "1200 sq ft",
       "location": "3rd Floor, West Wing",
       "facilities": ["Smart Board", "Wireless Presentation", "Leather Seating"],
-      "image": "https://i.ibb.co/KVdFKqY/conference-2.jpg",
+      "image": "https://i.ibb.co.com/k2JdGX4n/pexels-cottonbro-5990047.jpg",
       "cta": "Check Availability"
     },
     {
@@ -38,7 +38,7 @@
       "area": "3000 sq ft",
       "location": "South Pavilion",
       "facilities": ["Modular Layout", "Writable Walls", "Breakout Zones"],
-      "image": "https://i.ibb.co/9TFMq7h/conference-3.jpg",
+      "image": "https://i.ibb.co.com/Rp0mBQWk/pexels-rdne-5921498.jpg",
       "cta": "Reserve Space"
     },
     {
@@ -52,8 +52,7 @@
       "area": "4800 sq ft",
       "location": "Central Atrium",
       "facilities": ["Sound System", "Custom Lighting", "VIP Catering"],
-      "image": "https://i.ibb.co/FnpyXTn/conference-4.jpg",
-      "cta": "View Details"
+      "image": "https://i.ibb.co.com/1GQ3zfg6/pexels-nano-erdozain-120534369-17028564.jpg"
     },
     {
       "id": 5,
