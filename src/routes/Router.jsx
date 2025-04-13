@@ -38,7 +38,7 @@ const Router = createBrowserRouter([
                                 element: <LuxuryRooms></LuxuryRooms> 
                             },
                             {
-                                path: '/luxuryRooms/:id',
+                                path: '/luxuryRooms/details/:segment_id/:id',
                                 element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
                             }
                         ]

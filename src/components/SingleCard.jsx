@@ -5,6 +5,7 @@ const SingleCard = ({card}) => {
     id,
     estate_title,
     segment_name,
+    segment_id,
     short_description,
     long_description,
     description,
@@ -29,7 +30,7 @@ const SingleCard = ({card}) => {
         <h2 className="card-title">{estate_title}</h2>
         <p>{short_description}</p>
         <div className="card-actions justify-start mt-4">
-          <Link to={`/${segment_name}/:${id}`}><button className="">EXPLORE</button></Link>
+          <Link to={`/${segment_name}/details/${segment_id}/${id}`}><button className="">EXPLORE</button></Link>
         </div>
       </div>
     </div>
