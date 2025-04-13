@@ -13,6 +13,9 @@ import ConferenceHall from "../pages/ConferenceHall";
 import HomeRoot from "../layouts/HomeRoot";
 import DetailedViewOfCardbyID from "../components/DetailedViewOfCardbyID";
 import LuxuryRoomsRoot from "../layouts/LuxuryRoomsRoot";
+import RoofTopRoot from "../layouts/RoofTopRoot";
+import FacialAndSkinCareRoot from "../layouts/FacialAndSkinCareRoot";
+import ConferenceHallRoot from "../layouts/ConferenceHallRoot";
 
 
 const Router = createBrowserRouter([
@@ -45,15 +48,45 @@ const Router = createBrowserRouter([
                     },
                     {
                         path: '/rooftopRestaurant',
-                        element: <RooftopRestaurant></RooftopRestaurant>
+                        element: <RoofTopRoot></RoofTopRoot>,
+                        children: [
+                            {
+                                path: '/rooftopRestaurant',
+                                element: <RooftopRestaurant></RooftopRestaurant>
+                            },
+                            {
+                                path: '/rooftopRestaurant/details/:segment_id/:id',
+                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
+                            }
+                        ]
                     },
                     {
                         path: '/facialAndSkinCare',
-                        element: <FacialAndSkinCare></FacialAndSkinCare>
+                        element: <FacialAndSkinCareRoot></FacialAndSkinCareRoot>,
+                        children: [
+                            {
+                                path: '/facialAndSkinCare',
+                                element: <FacialAndSkinCare></FacialAndSkinCare>
+                            },
+                            {
+                                path: '/facialAndSkinCare/details/:segment_id/:id',
+                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
+                            }
+                        ]
                     },
                     {
                         path: '/conferenceHall',
-                        element: <ConferenceHall></ConferenceHall>
+                        element: <ConferenceHallRoot></ConferenceHallRoot>,
+                        children: [
+                            {
+                                path: '/conferenceHall',
+                                element: <ConferenceHall></ConferenceHall>
+                            },
+                            {
+                                path: '/conferenceHall/details/:segment_id/:id',
+                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
+                            }
+                        ]
                     }
                 ]
             },
