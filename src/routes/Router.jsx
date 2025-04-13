@@ -11,6 +11,8 @@ import RooftopRestaurant from "../pages/RooftopRestaurant";
 import FacialAndSkinCare from "../pages/FacialAndSkinCare";
 import ConferenceHall from "../pages/ConferenceHall";
 import HomeRoot from "../layouts/HomeRoot";
+import DetailedViewOfCardbyID from "../components/DetailedViewOfCardbyID";
+import LuxuryRoomsRoot from "../layouts/LuxuryRoomsRoot";
 
 
 const Router = createBrowserRouter([
@@ -29,7 +31,17 @@ const Router = createBrowserRouter([
                     },
                     {
                         path: '/luxuryRooms',
-                        element: <LuxuryRooms></LuxuryRooms>
+                        element: <LuxuryRoomsRoot></LuxuryRoomsRoot>,
+                        children: [
+                            {   
+                                path: '/luxuryRooms',
+                                element: <LuxuryRooms></LuxuryRooms> 
+                            },
+                            {
+                                path: '/luxuryRooms/:id',
+                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
+                            }
+                        ]
                     },
                     {
                         path: '/rooftopRestaurant',
