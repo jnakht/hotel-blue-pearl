@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const SingleCard = ({card}) => {
   const {
@@ -28,7 +29,7 @@ const SingleCard = ({card}) => {
         <h2 className="card-title">{estate_title}</h2>
         <p>{short_description}</p>
         <div className="card-actions justify-start mt-4">
-          <button className="">EXPLORE</button>
+          <Link to={`/${segment_name}/:${id}`}><button className="">EXPLORE</button></Link>
         </div>
       </div>
     </div>

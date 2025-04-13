@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Luxury Rooms",
+    "segment_name": "luxuryRooms",
     "description": "Stay in beautifully crafted rooms that combine modern comfort with timeless elegance. Wake up refreshed and inspired, with luxury amenities and impeccable service designed to make every moment feel like a dream.",
     "image": "https://i.ibb.co.com/v4gcNtk2/pexels-pixabay-164595.jpg",
     "cta": "Explore Rooms"
@@ -9,6 +10,7 @@
   {
     "id": 2,
     "title": "Rooftop Restaurant",
+    "segment_name": "rooftopRestaurant",
     "description": "Savor world-class cuisine while enjoying panoramic views of the city skyline. Our rooftop restaurant offers an unforgettable dining experience, blending flavor, ambiance, and sophistication in every dish and every moment shared.",
     "image": "https://i.ibb.co.com/C3GNSB21/pexels-jibarofoto-2146546.jpg",
     "cta": "View Menu"
@@ -16,6 +18,7 @@
   {
     "id": 3,
     "title": "Facial and Skin Care",
+    "segment_name": "facialAndSkinCare",
     "description": "Relax and indulge in personalized skincare treatments designed to rejuvenate and refresh. Our expert therapists use premium products and techniques to leave your skin glowing and your spirit fully renewed and balanced.",
     "image": "https://i.ibb.co.com/pBhxSXQV/pexels-polina-tankilevitch-3738349.jpg",
     "cta": "Book a Session"
@@ -23,6 +26,7 @@
   {
     "id": 4,
     "title": "Conference Hall",
+    "segment_name": "conferenceHall",
     "description": "Plan your meetings or events in a sophisticated conference space equipped with state-of-the-art technology. Whether corporate or personal, we ensure a seamless experience with elegance, convenience, and premium hospitality services.",
     "image": "https://i.ibb.co.com/4ZDpSnLv/pexels-pixabay-159213.jpg",
     "cta": "Check Availability"

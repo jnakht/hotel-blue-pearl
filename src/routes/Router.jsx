@@ -21,25 +21,26 @@ const Router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomeRoot></HomeRoot>,
+                
                 children: [
                     {
                         path: '/',
                         element: <Home></Home>
                     },
                     {
-                        path: '/segment-1',
+                        path: '/luxuryRooms',
                         element: <LuxuryRooms></LuxuryRooms>
                     },
                     {
-                        path: '/segment-2',
+                        path: '/rooftopRestaurant',
                         element: <RooftopRestaurant></RooftopRestaurant>
                     },
                     {
-                        path: '/segment-3',
+                        path: '/facialAndSkinCare',
                         element: <FacialAndSkinCare></FacialAndSkinCare>
                     },
                     {
-                        path: '/segment-4',
+                        path: '/conferenceHall',
                         element: <ConferenceHall></ConferenceHall>
                     }
                 ]
