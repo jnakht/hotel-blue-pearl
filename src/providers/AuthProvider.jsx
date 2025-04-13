@@ -1,4 +1,6 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
+import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
@@ -34,6 +36,11 @@ const AuthProvider = ({children}) => {
             .then(res => res.json())
             .then(data => setconferenceHallCards(data))
     },[])
+
+        // register with email and password
+        const createUser = (email, password) => {
+                return createUserWithEmailAndPassword(auth, email, password);
+        }
     const authInfo = {
         user,
         str,
@@ -42,6 +49,7 @@ const AuthProvider = ({children}) => {
         rooftopCards,
         facialAndSkinCareCards,
         conferenceHallCards,
+        createUser,
  };
     return (
         <AuthContext.Provider value={authInfo}>

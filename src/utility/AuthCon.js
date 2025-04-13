@@ -4,6 +4,6 @@ import { AuthContext } from "../providers/AuthProvider"
 
 
 
-export const getAuth = () => {
+export const getAuthContext = () => {
     return useContext(AuthContext);
 }
