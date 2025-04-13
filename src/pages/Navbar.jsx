@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { getAuthContext } from "../utility/AuthCon";
 
 const Navbar = () => {
     const navLinks = <>
@@ -8,6 +9,7 @@ const Navbar = () => {
         <li><NavLink to='/register'>Register</NavLink></li> 
     
     </>
+    const {user} = getAuthContext();
     return (
         <div className="navbar bg-background text-mText w-5/6 mx-auto shadow-sm">
             <div className="navbar-start">
@@ -33,7 +35,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn-ghost">Button</a>
+                {
+                    user && user.email
+                }
+                <a className="btn-ghost ml-5">Button</a>
             </div>
         </div>
     );

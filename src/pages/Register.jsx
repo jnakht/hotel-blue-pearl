@@ -1,3 +1,4 @@
+
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
 const Register = () => {
@@ -20,6 +21,7 @@ const Register = () => {
             console.error(error);
         })
     }
+    
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col ">
