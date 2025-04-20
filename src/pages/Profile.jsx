@@ -1,4 +1,4 @@
-import { createRef, useRef, useState } from "react";
+import { createRef, useEffect, useRef, useState } from "react";
 import { getAuthContext } from "../utility/AuthCon";
 import { FaRegEdit } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
@@ -20,6 +20,10 @@ const Profile = () => {
         .then()
         .catch()
     }
+    useEffect( () => {
+        photoURLRef.current.focus();
+        nameRef.current.focus();
+    },[isEditingName, isEditingPhotoURL])
     return (
         <div className="text-mText max-w-5/6 mx-auto mt-[100px]">
             <div className="w-[100px] h-[100px] mx-auto">
@@ -31,7 +35,7 @@ const Profile = () => {
                 </label>
                 <br />
                 <div className="flex gap-4 items-center">
-                    <input ref={nameRef} className="bg-background2" type="text" name="" id="" defaultValue={user?.displayName}  disabled={!isEditingName}  />
+                    <input  ref={nameRef} className="bg-background2" type="text" name="" id="" defaultValue={user?.displayName}  disabled={!isEditingName}  />
 
                     {
                         !isEditingName && <button onClick={() => setIsEditingName(!isEditingName)} className=""><FaRegEdit /></button>
