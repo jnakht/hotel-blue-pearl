@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
-    const { createUser, signInWithGoogle, user } = getAuthContext();
+    const { createUser, signInWithGoogle, user, updateUserProfile } = getAuthContext();
     const {
         register,
         handleSubmit,
@@ -39,6 +39,12 @@ const Register = () => {
             .then(result => {
                
                 console.log(result.user);
+                // update user profile
+                updateUserProfile(data.name, data.photoURL)
+                .then(() => {
+                    console.log('successfully updated')
+                })
+                .catch(error => console.error(error))
             })
             .catch(error => {
                 console.error(error);

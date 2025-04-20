@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -83,6 +83,13 @@ const AuthProvider = ({ children }) => {
         const signInWithGoogle = () => {
                 return signInWithPopup(auth, googleProvider);
         }
+        // update profile
+        const updateUserProfile = (name, photoURL) => {
+                return updateProfile(auth.currentUser, {
+                        displayName: name, 
+                        photoURL: photoURL
+                })
+        }
         // logOUt 
         const logOut = () => {
                return signOut(auth);
@@ -105,6 +112,7 @@ const AuthProvider = ({ children }) => {
                 conferenceHallCards,
                 createUser,
                 logInUser,
+                updateUserProfile,
                 signInWithGoogle,
                 logOut,
                 loading,
