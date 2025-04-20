@@ -96,6 +96,12 @@ const AuthProvider = ({ children }) => {
                         displayName: name,
                 })
         }
+        // update photoURL 
+        const updateUserPhotoURL = (photoURL) => {
+                return updateProfile(auth.currentUser, {
+                        photoURL: photoURL,
+                }) 
+        }
         // logOUt 
         const logOut = () => {
                return signOut(auth);
@@ -120,6 +126,7 @@ const AuthProvider = ({ children }) => {
                 logInUser,
                 updateUserProfile,
                 updateUserName,
+                updateUserPhotoURL,
                 signInWithGoogle,
                 logOut,
                 loading,

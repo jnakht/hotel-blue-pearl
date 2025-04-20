@@ -3,12 +3,20 @@ import { getAuthContext } from "../utility/AuthCon";
 import { FaRegEdit } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 const Profile = () => {
-    const {user, updateUserName} = getAuthContext();
+    const {user, updateUserName, updateUserPhotoURL} = getAuthContext();
     const [isEditingName, setIsEditingName] = useState(false);
+    const [isEditingPhotoURL, setIsEditingPhotoURL] = useState(false);
     const nameRef = useRef();
+    const photoURLRef = useRef();
     const handleUpdateName = () => {
         console.log('this is new username: ', nameRef.current.value);
         updateUserName(nameRef.current.value)
+        .then()
+        .catch()
+    }
+    const handleUpdatePhotoURL = () => {
+        console.log('this is new username: ', nameRef.current.value);
+        updateUserPhotoURL(photoURLRef.current.value)
         .then()
         .catch()
     }
@@ -32,6 +40,26 @@ const Profile = () => {
                         isEditingName &&  <button onClick={() => {
                             setIsEditingName(!isEditingName);
                             handleUpdateName();
+                        }} className=""><FaCheck /></button>
+
+                    }
+                </div>
+            </>
+            < > 
+                <label>
+                    Photo URL
+                </label>
+                <br />
+                <div className="flex gap-4 items-center">
+                    <input ref={photoURLRef} className="bg-background2" type="text" name="" id="" defaultValue={user?.photoURL}  disabled={!isEditingPhotoURL}  />
+
+                    {
+                        !isEditingPhotoURL && <button onClick={() => setIsEditingPhotoURL(!isEditingPhotoURL)} className=""><FaRegEdit /></button>
+                    }
+                    {
+                        isEditingPhotoURL &&  <button onClick={() => {
+                            setIsEditingPhotoURL(!isEditingPhotoURL);
+                            handleUpdatePhotoURL();
                         }} className=""><FaCheck /></button>
 
                     }
