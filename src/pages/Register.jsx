@@ -2,6 +2,7 @@
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const Register = () => {
     const { createUser } = getAuthContext();
@@ -64,6 +65,7 @@ const Register = () => {
                             </fieldset>
                         </div>
                     </form>
+                    <p className="text-center pb-4">Already have an account? Please <Link to='/login' className="text-blue-400 text-bold">Login</Link></p>
                 </div>
             </div>
         </div>

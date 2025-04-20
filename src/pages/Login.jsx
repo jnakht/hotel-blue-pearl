@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
     const {logInUser, user} = getAuthContext();
     const navigate = useNavigate();
@@ -31,34 +31,37 @@ const Login = () => {
         }
     } ,[user])
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero bg-background min-h-screen">
             <div className="hero-content flex-col ">
                 <div className="  ">
-                    <h1 className="text-5xl font-bold">Login NOw</h1>
+                    <h1 className="text-5xl font-bold text-mText">Login Now</h1>
                    
 
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-background2 text-mText w-full max-w-sm shrink-0 shadow-2xl">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="card-body">
                             <fieldset className="fieldset">
                                 
 
-                                <label className="fieldset-label">Email</label>
-                                <input {...register("email", { required: true })} type="email"  className="input" placeholder="Your email" />
+                                <label className="fieldset-label text-mText">Email</label>
+                                <input {...register("email", { required: true })} type="email"  className="input bg-background" placeholder="Your email" />
                                 {errors.email && <span>This field is required</span>}
 
 
-                                <label className="fieldset-label">Password</label>
-                                <input {...register("password", { required: true })} type="password"  className="input" placeholder="Password" />
+                                <label className="fieldset-label text-mText">Password</label>
+                                <input {...register("password", { required: true })} type="password"  className="input bg-background" placeholder="Password" />
                                 {errors.password && <span>This field is required</span>}
 
 
                                 <div><a className="link link-hover">Forgot password?</a></div>
-                                <button className="btn btn-neutral mt-4">Sign In</button>
+                                <button className="btn btn-neutral mt-4 bg-[#828283]">Sign In</button>
                             </fieldset>
                         </div>
                     </form>
+                    <div className="text-center pb-2">
+                    <p>New Here? Please <Link to='/register' className="text-blue-400 font-bold text-center ">Register</Link></p>
+                    </div>
                 </div>
             </div>
         </div>
