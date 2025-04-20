@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { getAuthContext } from "../utility/AuthCon";
-
+import '../utility/Navbar.css'
 const Navbar = () => {
     const {user, logOut} = getAuthContext();
     const navLinks = <>
