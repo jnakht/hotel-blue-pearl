@@ -4,6 +4,7 @@ import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
     const { createUser, signInWithGoogle, user } = getAuthContext();
@@ -14,10 +15,13 @@ const Register = () => {
         formState: { errors },
     } = useForm()
     const navigate = useNavigate();
-
+    const passwordRE = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     const onSubmit = (data) => {
         console.log(data)
         // create user with email and password
+        if (data.password.length < 6) {
+            toast.error('Password must be at least 6 characters long');
+        }
         createUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
@@ -29,14 +33,14 @@ const Register = () => {
 
     const handleGoogleRegister = () => {
         signInWithGoogle()
-        .then(result => console.log(result.user))
-        .catch(error => console.error(error))
+            .then(result => console.log(result.user))
+            .catch(error => console.error(error))
     }
     useEffect(() => {
         if (user) {
             navigate('/');
         }
-    } ,[user])
+    }, [user])
 
     return (
         <div className="hero bg-background min-h-screen">
@@ -63,7 +67,7 @@ const Register = () => {
 
                                 <label className="fieldset-label text-mText">Photo URL</label>
                                 <input {...register("photoURL", { required: true })} type="text" className="input  w-full bg-background" placeholder="Photo URL" />
-                                {errors.name && <span className='text-red-400'>This field is required</span>}
+                                {errors.photoURL && <span className='text-red-400'>This field is required</span>}
 
                                 <label className="fieldset-label text-mText">Email</label>
                                 <input {...register("email", { required: true })} type="email" className="input  w-full bg-background" placeholder="Your email" />
@@ -83,6 +87,8 @@ const Register = () => {
                     <p className="text-center pb-4">Already have an account? Please <Link to='/login' className="text-blue-400 text-bold">Login</Link></p>
                 </div>
             </div>
+            {/* toast container */}
+            <ToastContainer />
         </div>
     );
 };
