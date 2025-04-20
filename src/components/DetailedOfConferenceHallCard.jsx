@@ -21,7 +21,7 @@ const DetailedOfConferenceHallCard = () => {
 
     return (
         <div className="text-mText bg-background">
-            <p>{singleCard?.estate_title}</p>
+            <p className="max-w-5/6 mx-auto">{singleCard?.estate_title}</p>
             <img src={singleCard?.image} alt="" /> 
            <p> {singleCard?.long_description} </p>  
             <p>{singleCard?.price}</p>   

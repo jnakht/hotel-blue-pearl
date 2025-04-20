@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
+import { useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
-    const {logInUser} = getAuthContext();
+    const {logInUser, user} = getAuthContext();
+    const navigate = useNavigate();
+    const location = useLocation();
     const {
             register,
             handleSubmit,
@@ -21,6 +25,11 @@ const Login = () => {
             console.error(error);
         })
     }
+    useEffect( () => {
+        if (user) {
+            navigate(location?.state ? location.state : '/');
+        }
+    } ,[user])
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col ">
