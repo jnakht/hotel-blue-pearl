@@ -25,7 +25,7 @@ const Register = () => {
     }
 
     return (
-        <div className="hero bg-background2 min-h-screen">
+        <div className="hero bg-background min-h-screen">
             <div className="hero-content flex-col ">
 
                 <div className="card bg-background2 text-mText w-full ">
@@ -33,12 +33,12 @@ const Register = () => {
                         <div className="card-body">
                             <fieldset className="fieldset">
                                 <div className="  ">
-                                    <div className="flex gap-2 flex-col">
-                                    <h1 className="text-3xl font-bold">Welcome Hotel Blue Pearl</h1>
+                                    <div className="flex gap-2 flex-col mb-3">
+                                    <h1 className="text-3xl font-bold ">Welcome Hotel Blue Pearl</h1>
                                     <p className="text-sm font-light text-[#8A8A93]">Create a new account</p>
                                     </div>
-                                    <button className="flex btn text-xl w-full bg-background text-mText border-none items-center"><FcGoogle className="text-3xl" /> Continue With Google</button>
-                                    <p className="text-gray-400 text-xl">---------------------or----------------------</p>
+                                    <button className="flex btn text-xl w-full bg-background text-mText border-none items-center mb-8 mt-10"><FcGoogle className="text-3xl" /> Continue With Google</button>
+                                    <p className="text-gray-400 text-xl mb-8 ">---------------------or----------------------</p>
                                 </div>
                                 <label className="fieldset-label text-mText">Name</label>
                                 <input  {...register("name", { required: true })} type="text" className="input bg-background2" placeholder="What should i call you?" />
