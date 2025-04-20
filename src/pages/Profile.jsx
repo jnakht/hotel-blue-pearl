@@ -1,8 +1,42 @@
-
+import { createRef, useRef, useState } from "react";
+import { getAuthContext } from "../utility/AuthCon";
+import { FaRegEdit } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 const Profile = () => {
+    const {user, updateUserName} = getAuthContext();
+    const [isEditingName, setIsEditingName] = useState(false);
+    const nameRef = useRef();
+    const handleUpdateName = () => {
+        console.log('this is new username: ', nameRef.current.value);
+        updateUserName(nameRef.current.value)
+        .then()
+        .catch()
+    }
     return (
-        <div className="text-mText">
-            This is user profile
+        <div className="text-mText max-w-5/6 mx-auto mt-[100px]">
+            <div className="w-[100px] h-[100px] mx-auto">
+                <img className="rounded-4xl" src={user?.photoURL} alt="" />
+            </div>
+            < > 
+                <label>
+                    Name
+                </label>
+                <br />
+                <div className="flex gap-4 items-center">
+                    <input ref={nameRef} className="bg-background2" type="text" name="" id="" defaultValue={user?.displayName}  disabled={!isEditingName}  />
+
+                    {
+                        !isEditingName && <button onClick={() => setIsEditingName(!isEditingName)} className=""><FaRegEdit /></button>
+                    }
+                    {
+                        isEditingName &&  <button onClick={() => {
+                            setIsEditingName(!isEditingName);
+                            handleUpdateName();
+                        }} className=""><FaCheck /></button>
+
+                    }
+                </div>
+            </>
         </div>
     );
 };

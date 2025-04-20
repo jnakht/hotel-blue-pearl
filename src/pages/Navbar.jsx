@@ -56,12 +56,14 @@ const Navbar = () => {
                     <button onClick={handleLogOut} className="btn-ghost ml-5">LogOut</button>
                     </div> : <button className="btn-ghost ml-5">LogIn</button>
                 }
-        <div className="w-10 ml-4  rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            className="rounded-full"
-            src={user?.photoURL} />
-        </div>
+        {
+            user && <div className="w-10 ml-4  rounded-full">
+            <img
+              alt="Tailwind CSS Navbar component"
+              className="rounded-full"
+              src={user?.photoURL} />
+          </div>
+        }
             </div>
         </div>
     );
