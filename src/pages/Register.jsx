@@ -42,21 +42,21 @@ const Register = () => {
                                     <p className="text-[#828283] text-xl mb-8 ">---------------------or----------------------</p>
                                 </div>
                                 <label className="fieldset-label text-mText">Name</label>
-                                <input  {...register("name", { required: true })} type="text" className="input border border-[#828283] w-full bg-background2" placeholder="What should i call you?" />
+                                <input  {...register("name", { required: true })} type="text" className="input  w-full bg-background" placeholder="What should i call you?" />
                                 {errors.name && <span className='text-red-400'>This field is required</span>}
 
 
                                 <label className="fieldset-label text-mText">Photo URL</label>
-                                <input {...register("photoURL", { required: true })} type="text" className="input border border-[#828283] w-full bg-background2" placeholder="Photo URL" />
+                                <input {...register("photoURL", { required: true })} type="text" className="input  w-full bg-background" placeholder="Photo URL" />
                                 {errors.name && <span className='text-red-400'>This field is required</span>}
 
                                 <label className="fieldset-label text-mText">Email</label>
-                                <input {...register("email", { required: true })} type="email" className="input border border-[#828283] w-full bg-background2" placeholder="Your email" />
+                                <input {...register("email", { required: true })} type="email" className="input  w-full bg-background" placeholder="Your email" />
                                 {errors.email && <span className='text-red-400'>This field is required</span>}
 
 
                                 <label className="fieldset-label text-mText">Password</label>
-                                <input {...register("password", { required: true })} type="password" className="input border border-[#828283] w-full bg-background2" placeholder="Password" />
+                                <input {...register("password", { required: true })} type="password" className="input  w-full bg-background" placeholder="Password" />
                                 {errors.password && <span className='text-red-400'>This field is required</span>}
 
 
