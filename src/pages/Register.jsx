@@ -1,6 +1,8 @@
 
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
+import { FcGoogle } from "react-icons/fc";
+
 const Register = () => {
     const { createUser } = getAuthContext();
     const {
@@ -14,38 +16,47 @@ const Register = () => {
         console.log(data)
         // create user with email and password
         createUser(data.email, data.password)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch(error => {
-            console.error(error);
-        })
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
-    
-    return (
-        <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col ">
-                <div className="  ">
-                    <h1 className="text-5xl font-bold">Welcome Hotel Blue Pearl</h1>
-                    <p>Create a new account</p>
 
-                </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    return (
+        <div className="hero bg-background2 min-h-screen">
+            <div className="hero-content flex-col ">
+
+                <div className="card bg-background2 text-mText w-full ">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="card-body">
                             <fieldset className="fieldset">
-                                <label className="fieldset-label">Name</label>
-                                <input {...register("name", { required: true })} type="text"  className="input" placeholder="What should i call you?" />
-                                {errors.name && <span>This field is required</span>}
+                                <div className="  ">
+                                    <div className="flex gap-2 flex-col">
+                                    <h1 className="text-3xl font-bold">Welcome Hotel Blue Pearl</h1>
+                                    <p className="text-sm font-light text-[#8A8A93]">Create a new account</p>
+                                    </div>
+                                    <button className="flex btn text-xl w-full bg-background text-mText border-none items-center"><FcGoogle className="text-3xl" /> Continue With Google</button>
+                                    <p className="text-gray-400 text-xl">---------------------or----------------------</p>
+                                </div>
+                                <label className="fieldset-label text-mText">Name</label>
+                                <input  {...register("name", { required: true })} type="text" className="input bg-background2" placeholder="What should i call you?" />
+                                {errors.name && <span className='text-red-400'>This field is required</span>}
 
-                                <label className="fieldset-label">Email</label>
-                                <input {...register("email", { required: true })} type="email"  className="input" placeholder="Your email" />
-                                {errors.email && <span>This field is required</span>}
+
+                                <label className="fieldset-label text-mText">Photo URL</label>
+                                <input {...register("photoURL", { required: true })} type="text" className="input bg-background2" placeholder="Photo URL" />
+                                {errors.name && <span className='text-red-400'>This field is required</span>}
+
+                                <label className="fieldset-label text-mText">Email</label>
+                                <input {...register("email", { required: true })} type="email" className="input bg-background2" placeholder="Your email" />
+                                {errors.email && <span className='text-red-400'>This field is required</span>}
 
 
-                                <label className="fieldset-label">Password</label>
-                                <input {...register("password", { required: true })} type="password"  className="input" placeholder="Password" />
-                                {errors.password && <span>This field is required</span>}
+                                <label className="fieldset-label text-mText">Password</label>
+                                <input {...register("password", { required: true })} type="password" className="input bg-background2" placeholder="Password" />
+                                {errors.password && <span className='text-red-400'>This field is required</span>}
 
 
                                 <div><a className="link link-hover">Forgot password?</a></div>
