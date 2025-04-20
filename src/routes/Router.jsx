@@ -22,6 +22,8 @@ import PrivateRoute from "./PrivateRoute";
 import DetailedOfLuxuryRoomsCard from "../components/DetailedOfLuxuryRoomsCard";
 import CardDetailedRoot from "../layouts/CardDetailedRoot";
 import DetailedOfRooftopRestaurant from "../components/DetailedOfRooftopRestaurant";
+import DetailedOfFacialAndSkinCareCard from "../components/DetailedOfFacialAndSkinCareCard";
+import DetailedOfConferenceHallCard from "../components/DetailedOfConferenceHallCard";
 
 
 const Router = createBrowserRouter([
@@ -80,7 +82,7 @@ const Router = createBrowserRouter([
                                 children: [
                                     {
                                         index: true,
-                                        element: <DetailedOfRooftopRestaurant></DetailedOfRooftopRestaurant>
+                                        element: <PrivateRoute><DetailedOfRooftopRestaurant></DetailedOfRooftopRestaurant></PrivateRoute>
                                     }
                                 ]
                             }
@@ -94,6 +96,16 @@ const Router = createBrowserRouter([
                                 // path: '/facialAndSkinCare',
                                 index: true,
                                 element: <FacialAndSkinCare></FacialAndSkinCare>
+                            },
+                            {
+                                path: 'details/:id',
+                                element: <CardDetailedRoot></CardDetailedRoot>,
+                                children: [
+                                    {
+                                        index: true,
+                                        element: <PrivateRoute><DetailedOfFacialAndSkinCareCard></DetailedOfFacialAndSkinCareCard></PrivateRoute>
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -105,6 +117,16 @@ const Router = createBrowserRouter([
                                 // path: '/conferenceHall',
                                 index: true,
                                 element: <ConferenceHall></ConferenceHall>
+                            },
+                            {
+                                path: 'details/:id',
+                                element: <CardDetailedRoot></CardDetailedRoot>,
+                                children: [
+                                    {
+                                        index: true,
+                                        element: <PrivateRoute><DetailedOfConferenceHallCard></DetailedOfConferenceHallCard></PrivateRoute>
+                                    }
+                                ]
                             }
                         ]
                     }
