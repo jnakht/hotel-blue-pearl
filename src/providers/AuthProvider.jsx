@@ -1,6 +1,7 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
+import { GoogleAuthProvider } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -12,7 +13,7 @@ const AuthProvider = ({ children }) => {
         const [facialAndSkinCareCards, setFacialAndSkinCareCards] = useState([]);
         const [conferenceHallCards, setconferenceHallCards] = useState([]);
         const str = 'jisan';
-        
+        const googleProvider = new GoogleAuthProvider();
         useEffect(() => {
                 setLoading(true);
                 fetch('ServiceCategory.json')
@@ -78,6 +79,10 @@ const AuthProvider = ({ children }) => {
                 
                 return signInWithEmailAndPassword(auth, email, password);
         }
+        // sign in with google
+        const signInWithGoogle = () => {
+                return signInWithPopup(auth, googleProvider);
+        }
         // logOUt 
         const logOut = () => {
                return signOut(auth);
@@ -100,6 +105,7 @@ const AuthProvider = ({ children }) => {
                 conferenceHallCards,
                 createUser,
                 logInUser,
+                signInWithGoogle,
                 logOut,
                 loading,
         };
