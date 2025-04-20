@@ -15,15 +15,29 @@ const Register = () => {
         formState: { errors },
     } = useForm()
     const navigate = useNavigate();
-    const passwordRE = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    const upperCaseRE = /^(?=.*[A-Z]).*$/;
+    const lowerCaseRE = /^(?=.*[a-z]).*$/;
     const onSubmit = (data) => {
         console.log(data)
         // create user with email and password
         if (data.password.length < 6) {
-            toast.error('Password must be at least 6 characters long');
+            toast.error('Password Must Be At Least 6 Characters Long');
+            return;
+        }
+        else if (!upperCaseRE.test(data.password)) {
+            toast.error("Password Must Contain at least One Uppercase Letter");
+            return;
+        }
+        else if (!lowerCaseRE.test(data.password)) {
+            toast.error('Password Must Contain at Least One Lowercase Letter');
+            return;
+        }
+        else {
+            toast.success("Successfully Registered");
         }
         createUser(data.email, data.password)
             .then(result => {
+               
                 console.log(result.user);
             })
             .catch(error => {
