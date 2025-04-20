@@ -21,6 +21,7 @@ import PrivateRoute from "./PrivateRoute";
 
 import DetailedOfLuxuryRoomsCard from "../components/DetailedOfLuxuryRoomsCard";
 import CardDetailedRoot from "../layouts/CardDetailedRoot";
+import DetailedOfRooftopRestaurant from "../components/DetailedOfRooftopRestaurant";
 
 
 const Router = createBrowserRouter([
@@ -72,6 +73,16 @@ const Router = createBrowserRouter([
                                 // path: '/rooftopRestaurant',
                                 index: true,
                                 element: <RooftopRestaurant></RooftopRestaurant>
+                            },
+                            {
+                                path: 'details/:id',
+                                element: <CardDetailedRoot></CardDetailedRoot>,
+                                children: [
+                                    {
+                                        index: true,
+                                        element: <DetailedOfRooftopRestaurant></DetailedOfRooftopRestaurant>
+                                    }
+                                ]
                             }
                         ]
                     },
