@@ -24,6 +24,7 @@ import CardDetailedRoot from "../layouts/CardDetailedRoot";
 import DetailedOfRooftopRestaurant from "../components/DetailedOfRooftopRestaurant";
 import DetailedOfFacialAndSkinCareCard from "../components/DetailedOfFacialAndSkinCareCard";
 import DetailedOfConferenceHallCard from "../components/DetailedOfConferenceHallCard";
+import Profile from "../pages/Profile";
 
 
 const Router = createBrowserRouter([
@@ -143,6 +144,10 @@ const Router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/profile',
+                element: <Profile></Profile>
             }
         ]
     }
