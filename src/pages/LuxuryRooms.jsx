@@ -1,4 +1,4 @@
-import LoadSegmentCardsWithId from "../components/LoadSegmentCardsWithId";
+
 import SingleCard from "../components/SingleCard";
 import {  getAuthContext } from "../utility/AuthCon";
 

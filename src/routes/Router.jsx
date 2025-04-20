@@ -11,11 +11,16 @@ import RooftopRestaurant from "../pages/RooftopRestaurant";
 import FacialAndSkinCare from "../pages/FacialAndSkinCare";
 import ConferenceHall from "../pages/ConferenceHall";
 import HomeRoot from "../layouts/HomeRoot";
-import DetailedViewOfCardbyID from "../components/DetailedViewOfCardbyID";
+
 import LuxuryRoomsRoot from "../layouts/LuxuryRoomsRoot";
 import RoofTopRoot from "../layouts/RoofTopRoot";
 import FacialAndSkinCareRoot from "../layouts/FacialAndSkinCareRoot";
 import ConferenceHallRoot from "../layouts/ConferenceHallRoot";
+import PrivateRoute from "./PrivateRoute";
+
+
+import DetailedOfLuxuryRoomsCard from "../components/DetailedOfLuxuryRoomsCard";
+import CardDetailedRoot from "../layouts/CardDetailedRoot";
 
 
 const Router = createBrowserRouter([
@@ -31,19 +36,32 @@ const Router = createBrowserRouter([
                     {
                         path: '/',
                         element: <Home></Home>
+
+
                     },
                     {
                         path: '/luxuryRooms',
                         element: <LuxuryRoomsRoot></LuxuryRoomsRoot>,
                         children: [
                             {   
-                                path: '/luxuryRooms',
-                                element: <LuxuryRooms></LuxuryRooms> 
+                                // path: '/luxuryRooms',
+                                index: true,
+                                element: <LuxuryRooms></LuxuryRooms>,
+                                
                             },
                             {
-                                path: '/luxuryRooms/details/:segment_id/:id',
-                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
-                            }
+                                path: 'details/:id',
+                                element: <CardDetailedRoot></CardDetailedRoot>,
+                                children: [
+                                     {
+                                         // path: '/luxuryRooms/details/:id',
+                                         index: true,
+                                         element: <PrivateRoute><DetailedOfLuxuryRoomsCard></DetailedOfLuxuryRoomsCard></PrivateRoute>
+                                     }
+                                ]
+                                 
+                             }
+
                         ]
                     },
                     {
@@ -51,12 +69,9 @@ const Router = createBrowserRouter([
                         element: <RoofTopRoot></RoofTopRoot>,
                         children: [
                             {
-                                path: '/rooftopRestaurant',
+                                // path: '/rooftopRestaurant',
+                                index: true,
                                 element: <RooftopRestaurant></RooftopRestaurant>
-                            },
-                            {
-                                path: '/rooftopRestaurant/details/:segment_id/:id',
-                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
                             }
                         ]
                     },
@@ -65,12 +80,9 @@ const Router = createBrowserRouter([
                         element: <FacialAndSkinCareRoot></FacialAndSkinCareRoot>,
                         children: [
                             {
-                                path: '/facialAndSkinCare',
+                                // path: '/facialAndSkinCare',
+                                index: true,
                                 element: <FacialAndSkinCare></FacialAndSkinCare>
-                            },
-                            {
-                                path: '/facialAndSkinCare/details/:segment_id/:id',
-                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
                             }
                         ]
                     },
@@ -79,12 +91,9 @@ const Router = createBrowserRouter([
                         element: <ConferenceHallRoot></ConferenceHallRoot>,
                         children: [
                             {
-                                path: '/conferenceHall',
+                                // path: '/conferenceHall',
+                                index: true,
                                 element: <ConferenceHall></ConferenceHall>
-                            },
-                            {
-                                path: '/conferenceHall/details/:segment_id/:id',
-                                element: <DetailedViewOfCardbyID></DetailedViewOfCardbyID>
                             }
                         ]
                     }

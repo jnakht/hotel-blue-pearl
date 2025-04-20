@@ -5,44 +5,77 @@ import auth from "../firebase/firebase.config";
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
         const [user, setUser] = useState(null);
+        const [loading, setLoading] = useState(true);
         const [homeCards, setHomeCards] = useState([]);
         const [luxuryRoomsCards, setLuxuryRoomsCards] = useState([]);
         const [rooftopCards, setRooftopCards] = useState([]);
         const [facialAndSkinCareCards, setFacialAndSkinCareCards] = useState([]);
         const [conferenceHallCards, setconferenceHallCards] = useState([]);
         const str = 'jisan';
+        
         useEffect(() => {
+                setLoading(true);
                 fetch('ServiceCategory.json')
                         .then(res => res.json())
-                        .then(data => setHomeCards(data))
+                        .then(data => {
+                                setHomeCards(data);
+                                // setLoading(false);    
+                        })
+                        
         }, [])
         useEffect(() => {
+                setLoading(true);
                 fetch('LuxuryRooms.json')
                         .then(res => res.json())
-                        .then(data => setLuxuryRoomsCards(data))
+                        .then(data => {
+                                setLuxuryRoomsCards(data);
+                                // setLoading(false);
+                        });
+                        
         }, [])
         useEffect(() => {
+                setLoading(true);
                 fetch('RooftopRestaurant.json')
                         .then(res => res.json())
-                        .then(data => setRooftopCards(data))
+                        .then(data => {
+                                setRooftopCards(data);
+                                // setLoading(false);
+                        });
+                        
         }, [])
         useEffect(() => {
+                setLoading(true);
                 fetch('FacialAndSkinCare.json')
                         .then(res => res.json())
-                        .then(data => setFacialAndSkinCareCards(data))
+                        .then(data => {
+                                setFacialAndSkinCareCards(data);
+                                // setLoading(false);
+                        });
+                        
+                        
         }, [])
         useEffect(() => {
+                setLoading(true);
                 fetch('ConferenceHall.json')
                         .then(res => res.json())
-                        .then(data => setconferenceHallCards(data))
+                        .then(data => {
+                                setconferenceHallCards(data);
+                                setLoading(false);
+                        })
+                        
+                       
         }, [])
+
+        
 
         // create user  with email and password
         const createUser = (email, password) => {
+                
                 return createUserWithEmailAndPassword(auth, email, password);
         }
         // login with email and password
         const logInUser = (email, password) => {
+                
                 return signInWithEmailAndPassword(auth, email, password);
         }
         // logOUt 
@@ -53,6 +86,7 @@ const AuthProvider = ({ children }) => {
         useEffect(() => {
                 const unSubscribe = onAuthStateChanged(auth, currentUser => {
                         setUser(currentUser);
+                        setLoading(false);
                 })
                 return () => unSubscribe();
         }, [])
@@ -67,6 +101,7 @@ const AuthProvider = ({ children }) => {
                 createUser,
                 logInUser,
                 logOut,
+                loading,
         };
         return (
                 <AuthContext.Provider value={authInfo}>
