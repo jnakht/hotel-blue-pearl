@@ -1,17 +1,19 @@
 
+import { useEffect } from "react";
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
-    const { createUser, signInWithGoogle } = getAuthContext();
+    const { createUser, signInWithGoogle, user } = getAuthContext();
     const {
         register,
         handleSubmit,
         watch,
         formState: { errors },
     } = useForm()
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
         console.log(data)
@@ -30,6 +32,11 @@ const Register = () => {
         .then(result => console.log(result.user))
         .catch(error => console.error(error))
     }
+    useEffect(() => {
+        if (user) {
+            navigate('/');
+        }
+    } ,[user])
 
     return (
         <div className="hero bg-background min-h-screen">
