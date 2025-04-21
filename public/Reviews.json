@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "name": "Ayesha Rahman",
+      "profession": "Travel Blogger",
+      "title": "Unforgettable Experience!",
+      "review": "Staying at Hotel Blue Pearl was a dream come true. The rooftop restaurant created the perfect atmosphere every evening, and the staff went above and beyond to make our stay special.",
+      "rating": 5,
+      "image": "https://randomuser.me/api/portraits/women/45.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jisan Ahmed",
+      "profession": "Software Engineer",
+      "title": "Exceptional Service and Clean Rooms",
+      "review": "I was impressed by how spotless the rooms were and how friendly the staff behaved. Every request was handled immediately. It’s rare to find such consistent quality.",
+      "rating": 4.5,
+      "image": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mahi Chowdhury",
+      "profession": "University Lecturer",
+      "title": "Best Hotel View Ever!",
+      "review": "The view from my suite was absolutely breathtaking. I spent hours just enjoying the skyline. The staff was very attentive, and the entire stay was wonderfully relaxing.",
+      "rating": 4.8,
+      "image": "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rayhan Karim",
+      "profession": "Digital Marketer",
+      "title": "Breakfast Buffet was Outstanding",
+      "review": "Apart from the comfy rooms, I must mention the breakfast spread — it was massive and delicious! Definitely coming back for the food and hospitality.",
+      "rating": 4.7,
+      "image": "https://randomuser.me/api/portraits/men/58.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Nabila Hasan",
+      "profession": "Graphic Designer",
+      "title": "Luxurious and Peaceful Stay",
+      "review": "If you’re looking for peace and luxury combined, this is the place. The spa services were top-notch and the environment incredibly soothing.",
+      "rating": 5,
+      "image": "https://randomuser.me/api/portraits/women/22.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Arman Hossain",
+      "profession": "Entrepreneur",
+      "title": "Feels Like Home",
+      "review": "From the very first moment, the staff made us feel welcome. The rooms were spacious and the décor was elegant. The rooftop view at sunset was unforgettable.",
+      "rating": 4.9,
+      "image": "https://randomuser.me/api/portraits/men/75.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Sumaiya Jahan",
+      "profession": "School Teacher",
+      "title": "Clean, Modern, and Comfortable",
+      "review": "The hotel was spotless, the rooms modern, and the bed was so comfy I didn’t want to leave. Great for both business and family stays.",
+      "rating": 4.6,
+      "image": "https://randomuser.me/api/portraits/women/51.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Tahmid Rahman",
+      "profession": "Photographer",
+      "title": "Stunning Rooftop Views",
+      "review": "One of the highlights of my stay was enjoying coffee at the rooftop café in the evening. The city view is incredible and a must-experience.",
+      "rating": 5,
+      "image": "https://randomuser.me/api/portraits/men/16.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Tania Akter",
+      "profession": "Fashion Designer",
+      "title": "Relaxing Spa and Delicious Food",
+      "review": "I treated myself to the spa services and was not disappointed. The food at the rooftop restaurant is equally impressive — flavorful and beautifully presented.",
+      "rating": 4.8,
+      "image": "https://randomuser.me/api/portraits/women/40.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Omar Faruq",
+      "profession": "Content Creator",
+      "title": "Value for Money",
+      "review": "For the price, this hotel offers excellent value. Clean rooms, friendly staff, and great food options. Highly recommended for travelers and families.",
+      "rating": 4.7,
+      "image": "https://randomuser.me/api/portraits/men/28.jpg"
+    }
+  ]
+  
