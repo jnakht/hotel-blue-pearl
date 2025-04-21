@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import SingleCard from "../components/SingleCard";
 import {  getAuthContext } from "../utility/AuthCon";
 
 const FacialAndSkinCare = () => {
     const {facialAndSkinCareCards} = getAuthContext();
+    useEffect( () => {
+        document.title = "Facial And Skin Care";
+    },[])
     return (
         <div className="text-white max-w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {

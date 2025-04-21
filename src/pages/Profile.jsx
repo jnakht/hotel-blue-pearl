@@ -27,6 +27,9 @@ const Profile = () => {
         photoURLRef.current.focus();
         nameRef.current.focus();
     },[isEditingName, isEditingPhotoURL])
+    useEffect(() => {
+        document.title = "Hotel Blue Pearl | Profile";
+    } ,[])
     return (
         <div className="text-mText max-w-5/6 bg-background mx-auto mt-[100px]">
             <div className="w-[100px] h-[100px] mx-auto bg-background">

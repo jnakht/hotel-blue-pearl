@@ -30,6 +30,9 @@ const Login = () => {
             navigate(location?.state ? location.state : '/');
         }
     } ,[user])
+    useEffect(() => {
+        document.title = "Hotel Blue Pearl | Login";
+    } ,[])
     return (
         <div className="hero bg-background min-h-screen">
             <div className="hero-content flex-col ">

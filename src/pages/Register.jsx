@@ -7,6 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
+    useEffect(() => {
+        document.title = "Hotel Blue Pearl | Register";
+    } ,[])
     const { createUser, signInWithGoogle, user, updateUserProfile } = getAuthContext();
     const {
         register,

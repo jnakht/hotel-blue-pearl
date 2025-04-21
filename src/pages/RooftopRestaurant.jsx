@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import SingleCard from "../components/SingleCard";
 import {getAuthContext } from "../utility/AuthCon";
 
 const RooftopRestaurant = () => {
     const {rooftopCards} = getAuthContext();
+    useEffect(() => {
+        document.title = "Rooftop Restaurant";
+    } ,[])
     return (
         <div className="text-white max-w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {

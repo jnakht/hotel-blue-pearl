@@ -1,8 +1,12 @@
 
+import { useEffect } from "react";
 import SingleCard from "../components/SingleCard";
 import {  getAuthContext } from "../utility/AuthCon";
 
 const LuxuryRooms = () => {
+    useEffect(() => {
+        document.title = "Luxury Rooms";
+    } ,[])
     const {luxuryRoomsCards} = getAuthContext();
     console.log('number of luxury rooms: ', luxuryRoomsCards.length)
     return (

@@ -8,7 +8,7 @@ import Marquee from "react-fast-marquee";
 import ReviewCard from "../components/ReviewCard";
 import HeroCard from "../components/HeroCard";
 import Footer from "../components/Footer";
-
+import {Helmet} from "react-helmet";
 
 const Home = () => {
     const { str, homeCards } = useContext(AuthContext);
@@ -18,9 +18,14 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setReviews(data))
     } ,[])
+    useEffect(() => {
+        document.title = "Hotel Blue Pearl | Home";
+    } ,[])
     return (
         <div className="bg-background text-mText w-full ">
-
+            {/* <Helmet>
+                <title>Hotel Blue Pearl | Home</title>
+            </Helmet> */}
             <div className="bg-background text-mText h-[90vh] ">
                 <Slider></Slider>
                 <DescriptionWithTitleSection title='Explore Our Exclusive Categories'>
