@@ -26,7 +26,12 @@ const Home = () => {
                 <HomepageCards></HomepageCards>
 
 
-                <Marquee pauseOnHover='true' className="h-[500px]">
+
+                <DescriptionWithTitleSection title='✨ Explore What Our Guests Are Saying'>
+                    <p>At Hotel Blue Pearl, we believe every guest’s story matters. From cozy stays in our luxury rooms to memorable evenings at the rooftop restaurant, our guests share experiences filled with warmth, comfort, and unforgettable moments. Browse through their heartfelt reviews and discover why Hotel Blue Pearl is a favorite destination for travelers, foodies, and relaxation seekers alike.</p>
+                </DescriptionWithTitleSection>
+
+                <Marquee pauseOnHover='true' className="h-[500px] flex mt-[46px]">
                     {
                         reviews.map(review => <ReviewCard review={review}></ReviewCard>)
                     }
