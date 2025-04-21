@@ -25,12 +25,14 @@ import DetailedOfRooftopRestaurant from "../components/DetailedOfRooftopRestaura
 import DetailedOfFacialAndSkinCareCard from "../components/DetailedOfFacialAndSkinCareCard";
 import DetailedOfConferenceHallCard from "../components/DetailedOfConferenceHallCard";
 import Profile from "../pages/Profile";
+import ErrorPage from "../pages/ErrorPage";
 
 
 const Router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
