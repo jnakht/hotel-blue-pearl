@@ -45,7 +45,7 @@ const Home = () => {
                     <HeroCard></HeroCard>
                 </div>
 
-                <Footer></Footer>
+               
 
             </div>
 

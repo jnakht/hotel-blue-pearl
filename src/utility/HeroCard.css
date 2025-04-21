@@ -3,7 +3,7 @@
 } */
 
 .floating-container {
-    position: relative;
+    /* position: relative; */
 }
 .floating-laptop {
     animation: floatAnimation 3s ease-in-out infinite;
