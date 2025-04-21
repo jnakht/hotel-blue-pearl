@@ -7,6 +7,7 @@ import DescriptionWithTitleSection from "../components/DescriptionWithTitleSecti
 import Marquee from "react-fast-marquee";
 import ReviewCard from "../components/ReviewCard";
 import HeroCard from "../components/HeroCard";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -40,9 +41,11 @@ const Home = () => {
                 </Marquee>
 
 
-                <div className="max-w-5/6 mx-auto pb-24">
+                <div className="max-w-5/6 mx-auto mb-24">
                     <HeroCard></HeroCard>
                 </div>
+
+                <Footer></Footer>
 
             </div>
 
