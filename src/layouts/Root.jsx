@@ -7,7 +7,7 @@ const Root = () => {
         <div className="bg-background">
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
+            
 
         </div>
     );
