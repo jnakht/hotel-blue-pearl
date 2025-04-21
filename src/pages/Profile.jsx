@@ -47,7 +47,7 @@ const Profile = () => {
                         isEditingName &&  <button onClick={() => {
                             setIsEditingName(!isEditingName);
                             handleUpdateName();
-                        }} className=""><FaCheck /></button>
+                        }} className="text-2xl"><FaCheck /></button>
 
                     }
                 </div>
@@ -67,7 +67,7 @@ const Profile = () => {
                         isEditingPhotoURL &&  <button onClick={() => {
                             setIsEditingPhotoURL(!isEditingPhotoURL);
                             handleUpdatePhotoURL();
-                        }} className=""><FaCheck /></button>
+                        }} className="text-2xl"><FaCheck /></button>
 
                     }
                 </div>
