@@ -73,18 +73,20 @@ const Register = () => {
             <div className="hero-content flex-col ">
 
                 <div className="card bg-background2 text-mText w-full ">
-                    <div className="flex gap-2 flex-col mb-3 text-mText pt-6">
+                    <div className="flex gap-2 flex-col mb-3 text-mText p-4 pt-6">
                         <h1 className="text-3xl font-bold ">Welcome Hotel Blue Pearl</h1>
                         <p className="text-sm font-light text-[#828283]">Create a new account</p>
                     </div>
-                    <button onClick={handleGoogleRegister} className="flex btn text-xl w-full bg-background text-mText border-none items-center mt-4"><FcGoogle className="text-3xl" /> Continue With Google</button>
+                    <div className="px-4">
+                    <button onClick={handleGoogleRegister} className="flex btn text-xl w-full bg-background text-mText border-none items-center mt-4 "><FcGoogle className="text-3xl" /> Continue With Google</button>
+                    </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="card-body">
                             <fieldset className="fieldset">
-                                <div className="  ">
+                                <div className="text-center  ">
 
 
-                                    <p className="text-[#828283] text-xl mb-8 ">---------------------or----------------------</p>
+                                    <p className="text-[#828283] text-xl mb-8 ">-----or-----</p>
                                 </div>
                                 <label className="fieldset-label text-mText">Name</label>
                                 <input  {...register("name", { required: true })} type="text" className="input  w-full bg-background" placeholder="What should i call you?" />
