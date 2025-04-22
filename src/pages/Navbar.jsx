@@ -40,7 +40,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost text-xl  md:text-2xl font-normal md:font-bold">Hotel Blue Pearl</Link>
+                <Link to='/' className="btn btn-ghost text-lg  md:text-2xl font-normal md:font-bold">Hotel Blue Pearl</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-lg font-medium">
@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="navbar-end">
 
                 {
-                    user && <div title={user.displayName} className="w-10 ml-4  rounded-full">
+                    user && <div title={user.displayName} className="w-10 ml-4 hidden md:block rounded-full">
                         <img
                             alt="Tailwind CSS Navbar component"
                             className="rounded-full"
