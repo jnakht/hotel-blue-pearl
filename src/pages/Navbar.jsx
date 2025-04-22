@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { getAuthContext } from "../utility/AuthCon";
 import '../utility/Navbar.css'
+import userImg from '/user.jpg'
 const Navbar = () => {
     const { user, logOut } = getAuthContext();
     const navLinks = <>
@@ -54,9 +55,9 @@ const Navbar = () => {
                 {
                     user && <div title={user.displayName} className="w-10 ml-4 hidden md:block rounded-full">
                         <img
-                            alt="Tailwind CSS Navbar component"
+                            // alt="Tailwind CSS Navbar component"
                             className="rounded-full"
-                            src={user?.photoURL} />
+                            src={user?.photoURL || userImg} />
                     </div>
                 }
                 {
