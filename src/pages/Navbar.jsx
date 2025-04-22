@@ -1,29 +1,29 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { getAuthContext } from "../utility/AuthCon";
 import '../utility/Navbar.css'
 const Navbar = () => {
-    const {user, logOut} = getAuthContext();
+    const { user, logOut } = getAuthContext();
     const navLinks = <>
-        <li><NavLink to='/'>Home</NavLink></li> 
-        <li><NavLink to='/about'>About</NavLink></li> 
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/about'>About</NavLink></li>
         {
             user ? <>
-                <li><NavLink to='/profile'>Profile</NavLink></li> 
-            
+                <li><NavLink to='/profile'>Profile</NavLink></li>
+
             </> : <>
-            
-            
-            <li><NavLink to='/login'>Login</NavLink></li> 
-            <li><NavLink to='/register'>Register</NavLink></li> </>
+
+
+                <li><NavLink to='/login'>Login</NavLink></li>
+                <li><NavLink to='/register'>Register</NavLink></li> </>
         }
-    
+
     </>
-    
+
     const handleLogOut = () => {
         // logout
         logOut()
-        .then()
-        .catch()
+            .then()
+            .catch()
     }
     return (
         <div className="navbar bg-background text-mText w-5/6 mx-auto shadow-sm">
@@ -40,30 +40,30 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Hotel Blue Pearl</a>
+                <Link to='/' className="btn btn-ghost text-xl  md:text-2xl font-normal md:font-bold">Hotel Blue Pearl</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                   {
-                    navLinks
-                   }
+                <ul className="menu menu-horizontal px-1 text-lg font-medium">
+                    {
+                        navLinks
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
+
+                {
+                    user && <div title={user.displayName} className="w-10 ml-4  rounded-full">
+                        <img
+                            alt="Tailwind CSS Navbar component"
+                            className="rounded-full"
+                            src={user?.photoURL} />
+                    </div>
+                }
                 {
                     user ? <div>
-                {user.email }
-                    <button onClick={handleLogOut} className="btn-ghost ml-5">LogOut</button>
-                    </div> : <button className="btn-ghost ml-5">LogIn</button>
+                        <button onClick={handleLogOut} className="btn  ml-5">LogOut</button>
+                    </div> : <Link to='/login'><button className="btn  ml-5">LogIn</button></Link>
                 }
-        {
-            user && <div title={user.displayName} className="w-10 ml-4  rounded-full">
-            <img
-              alt="Tailwind CSS Navbar component"
-              className="rounded-full"
-              src={user?.photoURL} />
-          </div>
-        }
             </div>
         </div>
     );
