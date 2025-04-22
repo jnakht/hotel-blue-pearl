@@ -38,17 +38,17 @@ const Login = () => {
         document.title = "Hotel Blue Pearl | Login";
     } ,[])
     return (
-        <div className="hero bg-background min-h-screen">
+        <div className="hero bg-background min-h-screen ">
             <div className="hero-content flex-col ">
                 <div className="  ">
                     <h1 className="text-5xl font-bold text-mText">Login Now</h1>
                    
 
                 </div>
-                <div className="card bg-background2 text-mText w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-background2 text-mText w-96 max-w-sm shrink-0 shadow-2xl min-h-[400px] space-y-4">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="card-body">
-                            <fieldset className="fieldset">
+                            <fieldset className="fieldset space-y-4">
                                 
 
                                 <label className="fieldset-label text-mText">Email</label>
@@ -66,7 +66,7 @@ const Login = () => {
                             </fieldset>
                         </div>
                     </form>
-                    <div className="text-center pb-2">
+                    <div className="text-center pb-4">
                     <p>New Here? Please <Link to='/register' className="text-blue-400 font-bold text-center ">Register</Link></p>
                     </div>
                 </div>
