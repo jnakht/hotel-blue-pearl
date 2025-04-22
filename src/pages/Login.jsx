@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+
 const Login = () => {
     const {logInUser, user} = getAuthContext();
     const navigate = useNavigate();
@@ -20,9 +22,11 @@ const Login = () => {
         logInUser(data.email, data.password)
         .then(result => {
             console.log(result.user);
+            // toast.error("Login Successful");
         })
         .catch(error => {
             console.error(error);
+            toast.error(`${error}`);
         })
     }
     useEffect( () => {
@@ -67,6 +71,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
