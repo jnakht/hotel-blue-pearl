@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, Navigate, useLocation } from 'react-router-dom';
 
 const SingleHomeCard = ({card}) => {
@@ -7,8 +7,11 @@ const SingleHomeCard = ({card}) => {
     // console.log(idNumber)
     // console.log("this is segment name :", segment_name);
     const location = useLocation();
+
+
+    
     return (
-        <div className={`card lg:card-side h-[527px] bg-background2 shadow-sm flex flex-col ${idNumber % 2 === 0 && 'lg:flex-row-reverse'}`}>
+        <div  className={`card lg:card-side h-[527px] bg-background2 shadow-sm flex flex-col ${idNumber % 2 === 0 && 'lg:flex-row-reverse'}`}>
         <figure className='w-[40%]'>
           <img
             
@@ -16,7 +19,7 @@ const SingleHomeCard = ({card}) => {
             alt="Album" />
         </figure>
         <div className="flex flex-col justify-center items-center max-w-[60%] space-y-3 text-center">
-          <h2 className="text-3xl font-normal">{title}</h2>
+          <h2  className="text-3xl font-normal">{title}</h2>
           <p className='max-w-[60%]'>{description}</p>
             <Link to={`/${segment_name}`} className="btn w-[200px]">Explore</Link>
             

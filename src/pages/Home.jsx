@@ -26,7 +26,7 @@ const Home = () => {
             {/* <Helmet>
                 <title>Hotel Blue Pearl | Home</title>
             </Helmet> */}
-            <div className="bg-background text-mText h-[90vh] ">
+            <div className="bg-background text-mText ">
                 <Slider></Slider>
                 <DescriptionWithTitleSection title='Explore Our Exclusive Categories'>
                     <p>At Hotel Blue Pearl, we take pride in offering a diverse range of categories designed to suit every guest’s preference. Whether you're looking for luxury rooms, family suites, or rooftop dining experiences, each category promises comfort, elegance, and an unforgettable stay. Browse through our curated selections and discover the perfect option tailored just for you.</p>

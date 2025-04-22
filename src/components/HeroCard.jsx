@@ -3,7 +3,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const HeroCard = () => {
     return (
-        <div className="card lg:card-side h-[640px] bg-background2 shadow-sm mt-[76px]">
+        <div  className="card lg:card-side h-[640px] bg-background2 shadow-sm mt-[76px]">
         <figure className="bg-[#C4B5FD] w-[35%] flex justify-center items-center floating-container">
           <img
             className='hero-card-img floating-laptop'

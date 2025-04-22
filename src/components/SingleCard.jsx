@@ -19,7 +19,7 @@ const SingleCard = ({card}) => {
   } = card;
   // console.log('this is the imge link: ', image)
   return (
-    <div className="card bg-background2  shadow-sm">
+    <div  className="card bg-background2  shadow-sm">
       <figure>
         <img
           className="w-full h-[320px]"
