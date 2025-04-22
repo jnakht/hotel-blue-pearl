@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import DescriptionWithTitleSection from "../components/DescriptionWithTitleSection";
+import AboutUsCard from "../components/AboutUsCard";
 
 
 const About = () => {
+    const [cards, setCards] = useState([]);
     useEffect(() => {
         document.title = "Hotel Blue Pearl | About Us"
     }, [])
@@ -12,6 +14,20 @@ const About = () => {
     useEffect(() => {
         AOS.init({ duration: 1200 });
     }, []);
+    useEffect(() => {
+        fetch('/AboutUs.json')
+        .then(res => res.json())
+        .then(data => {
+            setCards(data);
+            console.log(data);
+            console.log(data[0])
+            
+        })
+        
+    } ,[])
+    useEffect(() => {
+        console.log(cards);
+    } ,[cards])
     return (
         <div className="max-w-5/6 mx-auto text-mText">
 
@@ -20,74 +36,22 @@ const About = () => {
             </DescriptionWithTitleSection>
             {/* 1st div */}
             <div data-aos="fade-left" className="flex justify-end mt-[100px]">
-                <div className="card bg-base-100 w-96 shadow-sm">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+                <AboutUsCard about={cards[0]}></AboutUsCard>
             </div>
 
 
 
             {/* 2nd div */}
             <div data-aos="fade-up">
-                <div className="card bg-base-100 w-96 shadow-sm">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+            <AboutUsCard about={cards[1]}></AboutUsCard>
             </div>
             {/* 3nd div */}
             <div data-aos="fade-up" className="flex justify-end">
-                <div className="card bg-base-100 w-96 shadow-sm">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+            <AboutUsCard about={cards[2]}></AboutUsCard>
             </div>
             {/* 4th div */}
             <div data-aos="fade-up">
-                <div className="card bg-base-100 w-96 shadow-sm">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+            <AboutUsCard about={cards[3]}></AboutUsCard>
             </div>
 
 
