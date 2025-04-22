@@ -1,10 +1,12 @@
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAuthContext } from "../utility/AuthCon";
 import { useForm } from "react-hook-form"
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import { IoEye } from "react-icons/io5";
+import { IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
     useEffect(() => {
@@ -17,6 +19,7 @@ const Register = () => {
         watch,
         formState: { errors },
     } = useForm()
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const upperCaseRE = /^(?=.*[A-Z]).*$/;
     const lowerCaseRE = /^(?=.*[a-z]).*$/;
@@ -98,7 +101,15 @@ const Register = () => {
 
 
                                 <label className="fieldset-label text-mText">Password</label>
-                                <input {...register("password", { required: true })} type="password" className="input  w-full bg-background" placeholder="Password" />
+                                <div className="relative">
+                                <input {...register("password", { required: true })} type={showPassword ? 'text' : 'password'} className="input  w-full bg-background" placeholder="Password" />
+                                <div onClick={() => setShowPassword(!showPassword)} className="absolute top-2 right-8 text-2xl">
+                                {showPassword ? <div><IoEye /></div> : <div><IoEyeOff /></div>
+                                }
+                                
+                                </div>
+                                
+                                </div>
                                 {errors.password && <span className='text-red-400'>This field is required</span>}
 
 
