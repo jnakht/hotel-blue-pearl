@@ -5,9 +5,13 @@ import {Helmet} from "react-helmet";
 const Root = () => {
     return (
         <div className="bg-background">
+            <div className="">
             <Navbar></Navbar>
+            </div>
             <Outlet></Outlet>
+            <div className="mt-[100px]">
             <Footer></Footer>
+            </div>
 
         </div>
     );
