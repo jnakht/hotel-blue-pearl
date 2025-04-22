@@ -57,7 +57,7 @@ const Navbar = () => {
                     </div> : <button className="btn-ghost ml-5">LogIn</button>
                 }
         {
-            user && <div className="w-10 ml-4  rounded-full">
+            user && <div title={user.displayName} className="w-10 ml-4  rounded-full">
             <img
               alt="Tailwind CSS Navbar component"
               className="rounded-full"
