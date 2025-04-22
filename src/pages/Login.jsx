@@ -45,7 +45,7 @@ const Login = () => {
                    
 
                 </div>
-                <div className="card bg-background2 text-mText w-96 max-w-sm shrink-0 shadow-2xl min-h-[400px] space-y-4">
+                <div className="card bg-background2 text-mText w-full md:w-96 max-w-sm shrink-0 shadow-2xl min-h-[400px] space-y-4">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="card-body">
                             <fieldset className="fieldset space-y-4">
