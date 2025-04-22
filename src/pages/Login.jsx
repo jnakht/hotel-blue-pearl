@@ -53,12 +53,12 @@ const Login = () => {
 
                                 <label className="fieldset-label text-mText">Email</label>
                                 <input {...register("email", { required: true })} type="email"  className="input bg-background" placeholder="Your email" />
-                                {errors.email && <span>This field is required</span>}
+                                {errors.email && <span className="text-red-400">This field is required</span>}
 
 
                                 <label className="fieldset-label text-mText">Password</label>
                                 <input {...register("password", { required: true })} type="password"  className="input bg-background" placeholder="Password" />
-                                {errors.password && <span>This field is required</span>}
+                                {errors.password && <span className="text-red-400">This field is required</span>}
 
 
                                 <div><a className="link link-hover">Forgot password?</a></div>
